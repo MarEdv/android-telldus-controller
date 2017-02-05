@@ -26,8 +26,8 @@ public class DeviceAdapter extends ArrayAdapter<Device> {
         TextView textView = (TextView) rowView.findViewById(R.id.list_item_name);
         textView.setText(values[position].getName());
         ImageView imageView = (ImageView) rowView.findViewById(R.id.list_item_icon);
-        imageView.setScaleX(1.5f);
-        imageView.setScaleY(1.5f);
+        imageView.setScaleX(1.4f);
+        imageView.setScaleY(1.4f);
         if (values[position].getState() == 2) {
             imageView.setImageResource(android.R.drawable.ic_delete);
         } else {
