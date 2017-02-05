@@ -24,8 +24,10 @@ public class DeviceAdapter extends ArrayAdapter<Device> {
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.list_item, parent, false);
         TextView textView = (TextView) rowView.findViewById(R.id.list_item_name);
-        ImageView imageView = (ImageView) rowView.findViewById(R.id.list_item_icon);
         textView.setText(values[position].getName());
+        ImageView imageView = (ImageView) rowView.findViewById(R.id.list_item_icon);
+        imageView.setScaleX(1.5f);
+        imageView.setScaleY(1.5f);
         if (values[position].getState() == 2) {
             imageView.setImageResource(android.R.drawable.ic_delete);
         } else {
